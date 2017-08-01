@@ -16,7 +16,11 @@ class IndexController extends Controller
      */
     public function index()
     {
-        return view('index.index');
+        $param = array(
+            'name'=>'1',
+            'goods'=>'甲醇',
+        );
+        return view('index.index',$param);
     }
 
 

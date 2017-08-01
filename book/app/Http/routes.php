@@ -11,16 +11,25 @@
 |
 */
 
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+use App\Entity\Member;
+
 Route::get('/', function () {
-    return view('welcome');
+  //  return  Member::all();
+    return view('login');
 });
+
 //前台首页
-Route::get('/index','IndexController@index');
+//Route::get('/index','IndexController@index');
 
 
 //后台首页
-Route::get('/admin','AdminController@index');
+//Route::get('/admin','AdminController@index');
 
 //用户添加
-Route::controller('/admin/user','UserController');
+//Route::controller('/admin/user','UserController');
 //Route::get('/admin/user/getAdd','AdminController@index');
+
