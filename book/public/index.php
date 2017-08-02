@@ -18,7 +18,14 @@
 | loading any of our classes later on. It feels nice to relax.
 |
 */
-
+ini_set('display_errors', 1);
+error_reporting(E_ALL^E_NOTICE);
+date_default_timezone_set('Asia/Shanghai');
+if (phpversion() >= '5.3') {
+    define('ROOT_PATH', dirname(__DIR__));
+} else {
+    define('ROOT_PATH', dirname(dirname(__FILE__)));
+}
 require __DIR__.'/../bootstrap/autoload.php';
 
 /*

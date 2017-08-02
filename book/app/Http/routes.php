@@ -16,11 +16,16 @@
 //});
 
 use App\Entity\Member;
+//use Illuminate\Routing\Route;
 
 Route::get('/', function () {
   //  return  Member::all();
     return view('login');
 });
+
+//验证码
+
+Route::any('validatecode/create','Service\ValidateCodeController@create');
 
 //前台首页
 //Route::get('/index','IndexController@index');
