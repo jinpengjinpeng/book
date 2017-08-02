@@ -18,14 +18,23 @@
 use App\Entity\Member;
 //use Illuminate\Routing\Route;
 
-Route::get('/', function () {
-  //  return  Member::all();
+//登录
+Route::get('/',function(){
     return view('login');
+
 });
+
+Route::get('/login','View\MemberController@toLogin');
+
+//注册
+Route::get('/register','View\MemberController@toRegister');
 
 //验证码
 
 Route::any('validatecode/create','Service\ValidateCodeController@create');
+
+//手机验证码
+Route::any('validatecode/sendSMS','Service\ValidateCodeController@sendSMS');
 
 //前台首页
 //Route::get('/index','IndexController@index');

@@ -10,31 +10,32 @@
 <body>
 <div class="page">
 
-    <div class="page__bd page__bd_spacing">
-        <a href="javascript:;" class="weui-btn weui-btn_default" id="showIOSActionSheet">菜单</a>
-    </div>
-    <!--BEGIN actionSheet-->
-    <div>
-        <div class="weui-mask" id="iosMask" style="display: none"></div>
-        <div class="weui-actionsheet" id="iosActionsheet">
+    {{--<div class="page__bd page__bd_spacing">--}}
+        {{--<a href="javascript:;" class="weui-btn weui-btn_default" id="showIOSActionSheet">菜单</a>--}}
+    {{--</div>--}}
+    {{--<!--BEGIN actionSheet-->--}}
+    {{--<div>--}}
+        {{--<div class="weui-mask" id="iosMask" style="display: none"></div>--}}
+        {{--<div class="weui-actionsheet" id="iosActionsheet">--}}
 
-            <div class="weui-actionsheet__menu">
-                <div class="weui-actionsheet__cell">用户中心</div>
-                <div class="weui-actionsheet__cell">选择套餐</div>
-                <div class="weui-actionsheet__cell">周边加油</div>
-                <div class="weui-actionsheet__cell">常见问题</div>
-            </div>
-            <div class="weui-actionsheet__action">
-                <div class="weui-actionsheet__cell" id="iosActionsheetCancel">取消</div>
-            </div>
-        </div>
-    </div>
+            {{--<div class="weui-actionsheet__menu">--}}
+                {{--<div class="weui-actionsheet__cell">用户中心</div>--}}
+                {{--<div class="weui-actionsheet__cell">选择套餐</div>--}}
+                {{--<div class="weui-actionsheet__cell">周边加油</div>--}}
+                {{--<div class="weui-actionsheet__cell">常见问题</div>--}}
+            {{--</div>--}}
+            {{--<div class="weui-actionsheet__action">--}}
+                {{--<div class="weui-actionsheet__cell" id="iosActionsheetCancel">取消</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
 
  @yield('content')
 </body>
-    <script src="/a/js/jquery-1.11.1.min.js" ></script>
+    <script src="/a/js/jquery-3.2.1.min.js" ></script>
    {{-- <script src="/a/js/example.js" ></script>--}}
 <script type="text/javascript">
+
     // ios
     $(function(){
         var iosActionsheet = $('#iosActionsheet');
