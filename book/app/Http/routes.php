@@ -41,6 +41,12 @@ Route::any('service/register','Service\MemberController@register');
 Route::any('view/categroy','View\BookController@index');
 
 Route::any('service/categroy','Service\BookController@getbookJson');
+
+//产品
+Route::get('view/product','View\BookController@toProduct');
+
+//产品详情
+Route::get('view/pdtcontent','View\BookController@toPdtcontent');
 //前台首页
 //Route::get('/index','IndexController@index');
 

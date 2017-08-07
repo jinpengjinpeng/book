@@ -51,7 +51,7 @@
                         console.log(data);
                         $('#title_expole').html('');
                         for(var i=0;i<data.length;i++){
-                            var text =  '<a class="weui-cell weui-cell_access" href="javascript:;">'
+                            var text =  '<a class="weui-cell weui-cell_access" href="/view/product?category_id='+data[i].id+'">'
                                     + '<div class="weui-cell__bd">'
                                     + '<p>'+ data[i].category_no+'</p>'
                                     + '</div>'
@@ -60,7 +60,10 @@
                             $('#title_expole').append(text);
                         }
                     },
-                    error:function(){
+                    error:function(xhr,status,error){
+                        console.log(xhr);
+                        console.log(status);
+                        console.log(error);
                     }
                 })
 }

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="/a/css/weui.css">
+    <link rel="stylesheet" href="/a/css/book.css">
+    <link rel="stylesheet" href="/a/css/swipe.css">
    {{-- <link rel="stylesheet" href="/a/css/example.css"/>--}}
 </head>
 <body>
@@ -42,6 +44,8 @@
  @yield('content')
 </body>
     <script src="/a/js/jquery-3.2.1.min.js" ></script>
+    <script src="/a/js/book.js" ></script>
+    <script src="/a/js/swipe.min.js" ></script>
     <script src="/dist/jquery.validator.js?local=zh-CN"></script>
    {{-- <script src="/a/js/example.js" ></script>--}}
 <script type="text/javascript">
