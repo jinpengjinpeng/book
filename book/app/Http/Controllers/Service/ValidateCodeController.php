@@ -3,19 +3,21 @@
 namespace App\Http\Controllers\Service;
 
 use App\User;
-use Illuminate\Support\Facades\Request;
 use Validator;
 use App\Http\Controllers\Controller;
 use App\Tool\ValidateCode\ValidateCode;
 use App\Tool\SMS\SendTemplateSMS;
 use App\Entity\TempPhone;
 use App\Model\M3Result;
+use Illuminate\Http\Request;
+
+
 
 
 class ValidateCodeController extends Controller
 {
     private $codeLen = 4;
-    private $charset = '1234567890';
+    private $charset = '123456789';
     private $code;
     /**
      * Create a new user instance after a valid registration.
@@ -23,12 +25,13 @@ class ValidateCodeController extends Controller
      * @param  array  $data
      * @return User
      */
-    protected function create($value='')
+    protected function create(Request $request)
     {
            // ob_clean();
             $V = new ValidateCode();
-            $_SESSION['ValidateCode']=$V->getCode();
             echo $V->doImg();
+            $code = $V->getCode();
+            $request->session()->put('validateCode',$code);
     }
 
     public function sendSMS(Request $request)
@@ -65,7 +68,6 @@ class ValidateCodeController extends Controller
             $M->message = '发送失败';
             return $M->toJson();
         }
-
 
      //   print_r($this->code);
     }

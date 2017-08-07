@@ -56,6 +56,7 @@ return [
 
     'from' => ['address' => null, 'name' => null],
 
+
     /*
     |--------------------------------------------------------------------------
     | E-Mail Encryption Protocol
@@ -72,6 +73,7 @@ return [
     /*
     |--------------------------------------------------------------------------
     | SMTP Server Username
+
     |--------------------------------------------------------------------------
     |
     | If your SMTP server requires a username for authentication, you should

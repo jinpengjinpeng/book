@@ -36,7 +36,7 @@ class ValidateCode
 	{
 	   //$this->font = ROOT_PATH.'/piblic/a/font/Chowderhead.ttf';
 		//引入一个字体
-		$this->font = ROOT_PATH.'/public/a/font/maobi.ttf';
+		$this->font = ROOT_PATH.'/public/a/font/Arial.ttf';
 
 		$this->img = imagecreatetruecolor($this->width, $this->heigh);
 	}

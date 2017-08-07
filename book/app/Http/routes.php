@@ -36,6 +36,11 @@ Route::any('validatecode/create','Service\ValidateCodeController@create');
 //手机验证码
 Route::any('validatecode/sendSMS','Service\ValidateCodeController@sendSMS');
 
+Route::any('service/register','Service\MemberController@register');
+
+Route::any('service/categroy','View\BookController@index');
+
+
 //前台首页
 //Route::get('/index','IndexController@index');
 

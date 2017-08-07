@@ -9,7 +9,6 @@
 </head>
 <body>
 <div class="page">
-
     {{--<div class="page__bd page__bd_spacing">--}}
         {{--<a href="javascript:;" class="weui-btn weui-btn_default" id="showIOSActionSheet">菜单</a>--}}
     {{--</div>--}}
@@ -29,10 +28,21 @@
             {{--</div>--}}
         {{--</div>--}}
     {{--</div>--}}
-
+    <div class="js_dialog" id="iosDialog2" style="display: none;">
+        <div class="weui-mask"></div>
+        <div class="weui-dialog">
+            <div class="weui-dialog__bd">
+                <p id="dialog_phone"></p>
+            </div>
+            <div class="weui-dialog__ft">
+                <a href="" id="weui_dialog_btn_phone" class="weui-dialog__btn weui-dialog__btn_primary">知道了</a>
+            </div>
+        </div>
+    </div>
  @yield('content')
 </body>
     <script src="/a/js/jquery-3.2.1.min.js" ></script>
+    <script src="/dist/jquery.validator.js?local=zh-CN"></script>
    {{-- <script src="/a/js/example.js" ></script>--}}
 <script type="text/javascript">
 

@@ -9,26 +9,10 @@
 
         <div class="page__bd">
             <div class="weui-cells weui-cells_radio">
-                <label class="weui-cell weui-check__label" for="photo">
-                    <div class="weui-cell__bd">
-                        <p>手机</p>
-                    </div>
-                    <div class="weui-cell__ft">
-                        <input type="radio" class="weui-check" name="radio1" id="photo" checked="checked"/>
-                        <span class="weui-icon-checked"></span>
-                    </div>
-                </label>
-                <label class="weui-cell weui-check__label" for="email">
-
-                    <div class="weui-cell__bd">
-                        <p>邮箱</p>
-                    </div>
-                    <div class="weui-cell__ft">
-                        <input type="radio" name="radio1" class="weui-check" id="email" />
-                        <span class="weui-icon-checked"></span>
-                    </div>
-                </label>
-
+                <p onclick="history.go(-1)">
+232432432
+                <img src="" alt="" >
+                </p>
             </div>
 
 
