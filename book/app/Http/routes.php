@@ -38,9 +38,9 @@ Route::any('validatecode/sendSMS','Service\ValidateCodeController@sendSMS');
 
 Route::any('service/register','Service\MemberController@register');
 
-Route::any('service/categroy','View\BookController@index');
+Route::any('view/categroy','View\BookController@index');
 
-
+Route::any('service/categroy','Service\BookController@getbookJson');
 //前台首页
 //Route::get('/index','IndexController@index');
 
