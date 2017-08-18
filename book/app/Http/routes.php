@@ -47,6 +47,13 @@ Route::get('view/product','View\BookController@toProduct');
 
 //产品详情
 Route::get('view/pdtcontent','View\BookController@toPdtcontent');
+
+//添加购物车
+Route::any('service/addcart','Service\AddCartController@addCart');
+//删除商品
+Route::any('service/delcart','Service\AddCartController@delcart');
+
+Route::any('view/cart','View\CartController@toCart');
 //前台首页
 //Route::get('/index','IndexController@index');
 

@@ -56,7 +56,7 @@
                     <button class="weui_btn weui_btn_primary" onclick="_addCart();">加入购物车</button>
                 </div>
                 <div class="bk_half_area">
-                    <button class="weui_btn weui_btn_default" onclick="_toCart()">查看购物车(<span id="cart_num" class="m3_price"></span>)</button>
+                    <button class="weui_btn weui_btn_default" onclick="_toCart()">查看购物车(<span id="cart_num" class="m3_price">{{$count}}</span>)</button>
                 </div>
             </div>
         </div>
@@ -66,23 +66,40 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript">
-        var bullets = document.getElementById('position').getElementsByTagName('li');
-        Swipe(document.getElementById('mySwipe'), {
-            auto: 2000,
-            continuous: true,
-            disableScroll: false,
-            callback: function(pos) {
-                var i = bullets.length;
-                while (i--) {
-                    bullets[i].className = '';
-                }
-                bullets[pos].className = 'cur';
-            }
-        });
+
       function _addCart()
       {
 
+          var pro_id = {{$product->id}}
 
+          $.ajax({
+             url:'/service/addcart',
+             type:'post',
+             datatype:'json',
+             data:{pro_id:pro_id},
+             success:function(data){
+                 console.log(data);
+               var data1 = JSON.parse(data);
+                 console.log(data1);
+
+               var num =  $('#cart_num').html();
+                 if(!num){
+                     num = 0;
+                 }
+               $('#cart_num').html(Number(num)+1);
+
+             },
+            error:function(xhr,status,error){
+                console.log(xhr);
+                console.log(status);
+                console.log(error);
+            }
+            })
+
+      }
+
+      function _toCart() {
+          location.href = '/view/cart';
       }
 
     </script>

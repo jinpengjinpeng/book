@@ -524,7 +524,7 @@ input.weui-btn_plain-default{
 .weui-cells_radio .weui-cell__ft{
   padding-left:0.35em;
 }
-.weui-cells_radio .weui-check:checked + .weui-icon-checked:before{
+.weui-cells_radio  .weui-icon-checked:before{
   display:block;
   content:'\EA08';
   color:#09BB07;
@@ -539,7 +539,7 @@ input.weui-btn_plain-default{
   font-size:23px;
   display:block;
 }
-.weui-cells_checkbox .weui-check:checked + .weui-icon-checked:before{
+.weui-cells_checkbox  .weui-icon-checked:before{
   content:'\EA06';
   color:#09BB07;
 }

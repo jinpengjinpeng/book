@@ -17,7 +17,7 @@ class BookController extends  Controller{
                // $category_id = $category_id['category_id'];
          $sonInfo = DB::table('category')->where('parent_id','=',$category_id['category_id'])->get();
 
-              echo json_encode(json_decode(json_encode($sonInfo)));
+         echo json_encode(json_decode(json_encode($sonInfo)));
 
         }
 

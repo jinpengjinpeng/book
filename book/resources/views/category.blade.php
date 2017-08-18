@@ -22,12 +22,7 @@
 
             <div class="weui-cells__title">带说明、跳转的列表项</div>
             <div class="weui-cells" id="title_expole">
-                <a class="weui-cell weui-cell_access" href="javascript:;">
-                    <div class="weui-cell__bd">
-                        <p>cell standard</p>
-                    </div>
-                    <div class="weui-cell__ft">说明文字</div>
-                </a>
+
             </div>
 
         </div>

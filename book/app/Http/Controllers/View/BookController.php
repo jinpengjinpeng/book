@@ -34,12 +34,32 @@ class BookController extends  Controller{
             $product = DB::table('product')->where('id',$pro['pro_id'])->first();
             $pdtInfo = DB::table('pdt_connent')->where('product_id',$pro['pro_id'])->first();
             $pdt_images = DB::table('pdt_images')->where('product_id',$pro['pro_id'])->get();
+
+           $bk_cart = $request->cookie('bk_cart');
+         //  print_r($bk_cart);die;
+           $bk_cart_arr = $bk_cart?explode(',',$bk_cart):array();
+           $count=0;
+           foreach($bk_cart_arr as $key=>$value){
+               $index = strpos($value,':');
+               if(substr($value,0,$index)==$pro['pro_id']){
+                   $count = (int)substr($value,$index+1);
+                   break;
+               }
+
+           }
+
+         //  print_r($count);die;
            //   print_r($product);die;
           //  print_r($pdtInfo);die;
             // log::error('efsdf');
             return view('pdt_content')->with('product',$product)
-                                        ->with('pdtinfo',$pdtInfo)
-                                        ->with('pdt_images', $pdt_images);
+                                      ->with('pdtinfo',$pdtInfo)
+                                      ->with('pdt_images', $pdt_images)
+                                      ->with('count', $count);
        }
+    public  function  toCart(Request $request){
+
+        return view('cart');
+    }
 
 }
