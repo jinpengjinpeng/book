@@ -26,4 +26,5 @@ class AdminController extends Controller
 public function aa(){
 $str = 'qqqq';
 $array = ['aa','bb'];
+$a =1;
 }
