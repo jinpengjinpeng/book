@@ -24,6 +24,10 @@ class AdminController extends Controller
 
 
 public function aa(){
+<<<<<<< HEAD
 $str = 'aa';
+=======
+$str = 'qqqq';
+>>>>>>> dev
 
 }
