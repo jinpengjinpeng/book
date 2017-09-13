@@ -17,6 +17,7 @@ class AdminController extends Controller
     public function index()
     {
     	$public = array();
+    	$params = '';
        return view('admin.index');
     }
 
