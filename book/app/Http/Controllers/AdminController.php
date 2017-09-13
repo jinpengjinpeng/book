@@ -27,4 +27,5 @@ public function aa(){
 $str = 'qqqq';
 $array = ['aa','bb'];
 $a =1;
+$b = 2;
 }
