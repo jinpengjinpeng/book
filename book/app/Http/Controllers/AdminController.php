@@ -18,6 +18,7 @@ class AdminController extends Controller
     {
     	$public = array();
     	$params = 'www';
+    	$search = ['11'];
        return view('admin.index');
     }
 
